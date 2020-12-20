@@ -299,6 +299,6 @@ class __TwigTemplate_21d5b5a344373dc17bd83eafd969581dcf04050f144ba1e5aed63138d1f
         {{- form_rest(form) -}}
     </table>
 {%- endblock form_widget_compound -%}
-", "form_table_layout.html.twig", "C:\\xampp\\htdocs\\memoria\\vendor\\symfony\\twig-bridge\\Resources\\views\\Form\\form_table_layout.html.twig");
+", "form_table_layout.html.twig", "C:\\xampp\\htdocs\\mem20\\vendor\\symfony\\twig-bridge\\Resources\\views\\Form\\form_table_layout.html.twig");
     }
 }

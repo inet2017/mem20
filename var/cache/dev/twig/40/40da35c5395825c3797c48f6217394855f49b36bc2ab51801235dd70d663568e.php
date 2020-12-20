@@ -173,6 +173,6 @@ class __TwigTemplate_8d31f6b37b7cfbf9a30944aff4dafab0641b496e48472d434a4354b4d98
         {% block javascripts %}{% endblock %}
     </body>
 </html>
-", "base.html.twig", "C:\\xampp\\htdocs\\memoria\\templates\\base.html.twig");
+", "base.html.twig", "C:\\xampp\\htdocs\\mem20\\templates\\base.html.twig");
     }
 }
