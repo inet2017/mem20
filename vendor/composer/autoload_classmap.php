@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Controller\\StandarController' => $baseDir . '/src/Controller/StandarController.php',
     'App\\Kernel' => $baseDir . '/src/Kernel.php',
     'Attribute' => $vendorDir . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
     'Collator' => $vendorDir . '/symfony/intl/Resources/stubs/Collator.php',
@@ -4309,6 +4310,7 @@ return array(
     'Twig\\Extension\\SandboxExtension' => $vendorDir . '/twig/twig/src/Extension/SandboxExtension.php',
     'Twig\\Extension\\StagingExtension' => $vendorDir . '/twig/twig/src/Extension/StagingExtension.php',
     'Twig\\Extension\\StringLoaderExtension' => $vendorDir . '/twig/twig/src/Extension/StringLoaderExtension.php',
+    'Twig\\Extra\\Intl\\IntlExtension' => $vendorDir . '/twig/intl-extra/src/IntlExtension.php',
     'Twig\\Extra\\TwigExtraBundle\\DependencyInjection\\Compiler\\MissingExtensionSuggestorPass' => $vendorDir . '/twig/extra-bundle/src/DependencyInjection/Compiler/MissingExtensionSuggestorPass.php',
     'Twig\\Extra\\TwigExtraBundle\\DependencyInjection\\Configuration' => $vendorDir . '/twig/extra-bundle/src/DependencyInjection/Configuration.php',
     'Twig\\Extra\\TwigExtraBundle\\DependencyInjection\\TwigExtraExtension' => $vendorDir . '/twig/extra-bundle/src/DependencyInjection/TwigExtraExtension.php',

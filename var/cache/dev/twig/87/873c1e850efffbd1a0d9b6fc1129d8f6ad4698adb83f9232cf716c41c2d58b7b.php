@@ -44,10 +44,24 @@ class __TwigTemplate_e2f8aef470c45d12ee8b4c717b566c76010686b6613c834432f4bba673c
         echo twig_escape_filter($this->env, (isset($context["param1"]) || array_key_exists("param1", $context) ? $context["param1"] : (function () { throw new RuntimeError('Variable "param1" does not exist.', 1, $this->source); })()), "html", null, true);
         echo "
 <br><br>
+
+";
+        // line 5
+        echo "
+";
+        // line 6
+        $context["variable"] = "Esto es una variable. ";
+        // line 7
+        echo "
+";
+        // line 8
+        echo twig_escape_filter($this->env, (isset($context["variable"]) || array_key_exists("variable", $context) ? $context["variable"] : (function () { throw new RuntimeError('Variable "variable" does not exist.', 8, $this->source); })()), "html", null, true);
+        echo "
 <a href=\" ";
-        // line 3
+        // line 9
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("index");
-        echo "\"> Página  principal</a>";
+        echo "\"> Página  principal</a>
+";
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
 
@@ -68,13 +82,20 @@ class __TwigTemplate_e2f8aef470c45d12ee8b4c717b566c76010686b6613c834432f4bba673c
 
     public function getDebugInfo()
     {
-        return array (  49 => 3,  43 => 1,);
+        return array (  62 => 9,  58 => 8,  55 => 7,  53 => 6,  50 => 5,  43 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("Hola Parámetro {{param1}}
 <br><br>
-<a href=\" {{ path('index')}}\"> Página  principal</a>", "standar/pagina2.html.twig", "C:\\xampp\\htdocs\\mem20\\templates\\standar\\pagina2.html.twig");
+
+{# este es un comentario.s#}
+
+{% set variable= 'Esto es una variable. ' %}
+
+{{ variable }}
+<a href=\" {{ path('index')}}\"> Página  principal</a>
+", "standar/pagina2.html.twig", "C:\\xampp\\htdocs\\mem20\\templates\\standar\\pagina2.html.twig");
     }
 }
