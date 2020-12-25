@@ -1,13 +1,28 @@
-Hola Parámetro {{param1}}
-<br><br>
+{% extends 'base.html.twig' %}
+{% block title %}{{ parent() }}{% endblock %}
+{% block stylesheets%}
+	{{ parent() }}
+{% endblock%}
 
-{# este es un comentario.s#}
+{% block body %}
 
-{% set variable= 'Esto es una variable. ' %}
+	Hola Parámetro {{param1}}
+	<br><br>
 
-{{ variable }}
-<br><br>
+	{# este es un comentario.s#}
 
-{{ '1000000'|format_currency('EUR') }}
+	{% set variable= 'Esto es una variable. ' %}
 
-<a href=" {{ path('index')}}"> Página  principal</a>
+	{{ variable }}
+	<br><br>
+
+	{{ '1000000'|format_currency('EUR') }}
+
+	<a href=" {{ path('index')}}"> Página  principal</a>
+{% endblock%}
+
+{% block javascripts%}
+
+	{{ parent() }}
+	
+{% endblock%}
