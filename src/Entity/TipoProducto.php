@@ -16,17 +16,21 @@ class TipoProducto
      * @ORM\Column(type="integer")
      */
     private $id;
-
     /**
      * @ORM\Column(type="string", length=120)
      */
     private $estado;
-
     /**
      * @ORM\Column(type="boolean")
      */
     private $isActivo;
 
+    public function __construct($estado=null, $activo=null){
+
+        $this->estado=$estado;
+        $this->isActivo=$activo;
+        
+    }
     public function getId(): ?int
     {
         return $this->id;
@@ -55,4 +59,5 @@ class TipoProducto
 
         return $this;
     }
+    
 }
