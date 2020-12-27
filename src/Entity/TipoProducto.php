@@ -25,6 +25,7 @@ class TipoProducto
      */
     private $isActivo;
 
+
     public function __construct($estado=null, $activo=null){
 
         $this->estado=$estado;
@@ -59,5 +60,6 @@ class TipoProducto
 
         return $this;
     }
+
     
 }
