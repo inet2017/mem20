@@ -15,6 +15,7 @@ return [
         '/_profiler/open' => [[['_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'], null, null, null, false, false, null]],
         '/' => [[['_route' => 'index', '_controller' => 'App\\Controller\\StandarController::index'], null, null, null, false, false, null]],
         '/pedirdatos' => [[['_route' => 'pedirDatos', '_controller' => 'App\\Controller\\StandarController::pedirDatos'], null, null, null, false, false, null]],
+        '/busquedas' => [[['_route' => 'busquedas', '_controller' => 'App\\Controller\\StandarController::busquedas'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'

@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\TipoProductoRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -25,11 +27,17 @@ class TipoProducto
      */
     private $isActivo;
 
+    /**
+     * @ORM\OneToMany(targetEntity=Productos::class, mappedBy="estado_id")
+     */
+    private $productos;
+
 
     public function __construct($estado=null, $activo=null){
 
         $this->estado=$estado;
         $this->isActivo=$activo;
+        $this->productos = new ArrayCollection();
         
     }
     public function getId(): ?int
@@ -57,6 +65,36 @@ class TipoProducto
     public function setIsActivo(bool $isActivo): self
     {
         $this->isActivo = $isActivo;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Productos[]
+     */
+    public function getProductos(): Collection
+    {
+        return $this->productos;
+    }
+
+    public function addProducto(Productos $producto): self
+    {
+        if (!$this->productos->contains($producto)) {
+            $this->productos[] = $producto;
+            $producto->setEstadoId($this);
+        }
+
+        return $this;
+    }
+
+    public function removeProducto(Productos $producto): self
+    {
+        if ($this->productos->removeElement($producto)) {
+            // set the owning side to null (unless already changed)
+            if ($producto->getEstadoId() === $this) {
+                $producto->setEstadoId(null);
+            }
+        }
 
         return $this;
     }

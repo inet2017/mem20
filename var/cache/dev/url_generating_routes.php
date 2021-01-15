@@ -18,4 +18,5 @@ return [
     'index' => [[], ['_controller' => 'App\\Controller\\StandarController::index'], [], [['text', '/']], [], []],
     'pagina2' => [['nombre'], ['_controller' => 'App\\Controller\\StandarController::pagina2'], [], [['variable', '/', '[^/]++', 'nombre', true], ['text', '/pagina2']], [], []],
     'pedirDatos' => [[], ['_controller' => 'App\\Controller\\StandarController::pedirDatos'], [], [['text', '/pedirdatos']], [], []],
+    'busquedas' => [[], ['_controller' => 'App\\Controller\\StandarController::busquedas'], [], [['text', '/busquedas']], [], []],
 ];

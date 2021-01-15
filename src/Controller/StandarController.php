@@ -7,6 +7,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Doctrine\ORM\EntityManagerInterface;
 use App\Entity\TipoProducto;
+use App\Entity\Producto;
 
 
 class StandarController extends AbstractController
@@ -35,7 +36,7 @@ class StandarController extends AbstractController
     {
 
         $entityManager = $this->getDoctrine()->getManager();
-        $producto=new TipoProducto("Usado", "true");
+        $producto=new TipoProducto("Ocasión", "true");
         
         //$producto->setEstado("Nuevo");
         //$producto->setIsActivo("true");
@@ -44,5 +45,17 @@ class StandarController extends AbstractController
         $entityManager->flush();
 
         return $this->render('standar/pedirDatos.html.twig');
+    }
+
+    /**
+    *   @Route ("/busquedas", name="busquedas")
+    */
+    public function busquedas(){
+        
+        $em=$this->getDoctrine()->getManager();
+        $tProducto=$em->getRepository(TipoProducto::class)->findAll();
+
+        return $this->render('standar/busqueda.html.twig', array('find' =>$tProducto));
+
     }
 }

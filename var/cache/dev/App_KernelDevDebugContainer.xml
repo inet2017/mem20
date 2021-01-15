@@ -346,6 +346,10 @@
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
     </service>
+    <service id="App\Repository\ProductosRepository" class="App\Repository\ProductosRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
     <service id="App\Repository\TipoProductoRepository" class="App\Repository\TipoProductoRepository" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
@@ -4086,7 +4090,7 @@
       <factory class="Doctrine\ORM\EntityManager" method="create"/>
     </service>
     <service id="doctrine.orm.container_repository_factory" class="Doctrine\Bundle\DoctrineBundle\Repository\ContainerRepositoryFactory">
-      <argument type="service" id=".service_locator.POyXZ75"/>
+      <argument type="service" id=".service_locator.dpLPr1b"/>
     </service>
     <service id="doctrine.orm.manager_configurator.abstract" class="Doctrine\Bundle\DoctrineBundle\ManagerConfigurator" abstract="true">
       <argument type="collection"/>
@@ -5083,6 +5087,8 @@
     <service id=".abstract.instanceof.App\Repository\FabricanteRepository" class="App\Repository\FabricanteRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ProductoRepository" class="App\Repository\ProductoRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\ProductoRepository" class="App\Repository\ProductoRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ProductosRepository" class="App\Repository\ProductosRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\ProductosRepository" class="App\Repository\ProductosRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\TipoProductoRepository" class="App\Repository\TipoProductoRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\TipoProductoRepository" class="App\Repository\TipoProductoRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".service_locator.Kbr2i2X" class="Symfony\Component\DependencyInjection\ServiceLocator">
@@ -5581,11 +5587,12 @@
         <argument key="doctrine.orm.default_listeners.attach_entity_listeners" type="service" id="doctrine.orm.default_listeners.attach_entity_listeners"/>
       </argument>
     </service>
-    <service id=".service_locator.POyXZ75" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.dpLPr1b" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Repository\FabricanteRepository" type="service" id="App\Repository\FabricanteRepository"/>
         <argument key="App\Repository\ProductoRepository" type="service" id="App\Repository\ProductoRepository"/>
+        <argument key="App\Repository\ProductosRepository" type="service" id="App\Repository\ProductosRepository"/>
         <argument key="App\Repository\TipoProductoRepository" type="service" id="App\Repository\TipoProductoRepository"/>
       </argument>
     </service>
